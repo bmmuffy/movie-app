@@ -1,0 +1,88 @@
+<div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Movies</h1>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary" (click)="redirectNewMoviePage()">New Movie</button>
+            </div>
+ 
+          </div>
+          
+
+          
+          
+
+        </header>
+        
+        
+
+        
+        
+      </section>
+
+      <section class="main">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Movie Name</th>
+            <th>Genre</th>
+            <th>Director</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let movie of movies">
+            <th scope="row">{{movie.id}}</th>
+            <td>{{movie.name}}</td>
+            <td>{{movie.genre}}</td>
+            <td>{{movie.director}}</td>
+            <td>
+              <button type="button" class="btn btn-success" (click)="editMoviePage(movie)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="deleteMovie(movie)">Delete</button>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+ 
+  
+                      <div >
+    <ul>
+        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+    </ul>
+</div>
+<p><a  [routerLink]="['/login']">Logout</a></p>
+  
+  
+  
+  
+  
+  
+</div>
